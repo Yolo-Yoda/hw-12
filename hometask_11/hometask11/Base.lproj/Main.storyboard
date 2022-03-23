@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QEn-7I-kLJ">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First game-->
+        <scene sceneID="gSO-0s-mGr">
+            <objects>
+                <viewController id="QEn-7I-kLJ" customClass="SecondViewController" customModule="hometask_11" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dGH-32-q1l">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddr-D2-zfa">
+                                <rect key="frame" x="126.5" y="318" width="122" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="View animation"/>
+                                <connections>
+                                    <action selector="pushAnmate:" destination="QEn-7I-kLJ" eventType="touchUpInside" id="i5d-nK-wJP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Rb7-bz-esI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="ddr-D2-zfa" firstAttribute="centerY" secondItem="dGH-32-q1l" secondAttribute="centerY" id="eiu-m9-iPx"/>
+                            <constraint firstItem="ddr-D2-zfa" firstAttribute="centerX" secondItem="dGH-32-q1l" secondAttribute="centerX" id="kZl-lc-AbA"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Reg-JL-CKp" appends="YES" id="CrP-l7-kPt"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="First game" id="1oY-Ng-Vmt">
+                        <barButtonItem key="rightBarButtonItem" title="close" id="CbH-Tl-t9Y">
+                            <connections>
+                                <action selector="close:" destination="QEn-7I-kLJ" id="pqg-kk-f70"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="animateButton" destination="ddr-D2-zfa" id="5K5-dF-gYT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QOe-75-Z87" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Reg-JL-CKp">
+                    <connections>
+                        <action selector="tap:" destination="QEn-7I-kLJ" id="m55-iJ-Vff"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="453.62318840579712" y="127.90178571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
